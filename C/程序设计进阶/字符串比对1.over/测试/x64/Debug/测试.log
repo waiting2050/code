@@ -1,0 +1,5 @@
+﻿  FileName.c
+C:\Users\waiting2050\Desktop\code\程序设计进阶\字符串比对1.over\FileName.c(14,2): warning C4013: “gets”未定义；假设外部返回 int
+C:\Users\waiting2050\Desktop\code\程序设计进阶\字符串比对1.over\FileName.c(23,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\waiting2050\Desktop\code\程序设计进阶\字符串比对1.over\FileName.c(30,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  测试.vcxproj -> C:\Users\waiting2050\Desktop\code\程序设计进阶\字符串比对1.over\x64\Debug\测试.exe
