@@ -5,8 +5,8 @@ using ull = unsigned long long;
 
 const int N = 1e7 + 7;
 
-string s(N << 1, '\0'); //必须赋初值，大小起码为2*n+3 
-int p[N << 1]; //P 
+string s;
+int p[N << 1];
 
 int main()
 {
@@ -14,6 +14,7 @@ int main()
 	
 	int n; cin >> n >> s;
 	s.insert(s.begin(), '?');
+	s.resize(N << 1, '\0'); //大小起码2*n+3
 	
 	for(int i = 2 * n + 1; i >= 1; i--)
 	{
