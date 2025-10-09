@@ -23,6 +23,7 @@ int main()
 		
 	}while( a != number );
 	printf("nb!你只用了%d次就猜对了数字\n", count);
+
 	
 	return 0;
 }
