@@ -33,7 +33,7 @@ void update(int k, ll x)//更新树状数组
 ll getsum(ll x)//对区间的查询
 {
 	ll res = 0;
-	for (int i = x; i > 0; i -= lowbit(i)) res += (x + 1) * td[i] - tid[i];//根据公式得到的
+	for (int i = x; i; i -= lowbit(i)) res += (x + 1) * td[i] - tid[i];//根据公式得到的
 	return res;
 }
 
