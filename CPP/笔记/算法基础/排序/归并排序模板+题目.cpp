@@ -30,7 +30,7 @@ using ll = long long;
 const int N = 1e5 + 10;
 ll a[N], temp[N];
 
-void merge_sort(ll a[], int l, int r)
+void merge_sort(ll (&a)[], int l, int r)
 {
 	if (l >= r) return;
 	int mid = (l + r) >> 1;
