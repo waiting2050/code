@@ -40,7 +40,7 @@ void dijkstra(int st)
 	d[st] = 0;
 
 	priority_queue<Edge> pq;
-	pq.push({ st, d[st]});
+	pq.push({st, d[st]});
 
 	while (pq.size())
 	{
