@@ -73,7 +73,7 @@ markdown[^2]
 [^1]: 我是脚注
 [^2]: 我也是脚注
 
-！[图片](https://huiji-public.huijistatic.com/isaac/uploads/0/04/Collectibles_sprite.png)
+![图片](https://huiji-public.huijistatic.com/isaac/uploads/0/04/Collectibles_sprite.png)
 // 展示图片，[]里是文字说明，与上文的区别是多了个感叹号
 
 
