@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-/* ╠Да© */
+
 string a, b;
 vector<int> A, B, C;
 
