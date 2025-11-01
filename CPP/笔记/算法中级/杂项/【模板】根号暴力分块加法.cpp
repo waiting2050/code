@@ -65,6 +65,7 @@ void solve()
 		blk[i] = i / sz + 1; // 获取编号
 		sum[blk[i]] += a[i];
 		if(i > 1 && blk[i] != blk[i - 1]) L[blk[i]] = i, R[blk[i - 1]] = i - 1; // 只有在断点处更新，注意最开始的区间要特判
+																				// 注意i对L，赋值为i；i-1对R，赋值为i-1
 	}
 	L[blk[1]] = 1, R[blk[n]] = n; // 最开始的区间特判，数目不够sz就改最后区间的右端点编号
 	
