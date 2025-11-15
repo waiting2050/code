@@ -4,6 +4,7 @@ using ll = long long;
 
 const int N = 2e5 + 7;
 
+// d数组是到上一节点距离，getd是到根节点距离
 int pre[N], sz[N], d[N];
 
 int find(int x) {return pre[x] == x ? x : find(pre[x]);}

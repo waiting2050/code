@@ -17,7 +17,7 @@ vector<Edge> g[N];
 int n, m = 5e4;
 ll d[N];
 
-bool spfa(int st) //最长路与最长路区别只有两个地方，1：d[i]赋值为-INF；2：改为d[x]+w>d[y] 
+bool spfa(int st) //最长路与最短路区别只有两个地方，1：d[i]赋值为-INF；2：改为d[x]+w>d[y] 
 {
 	vector<int> cnt(m + 1);
 	queue<int> q;
