@@ -22,7 +22,7 @@ void solve()
 {
 	int n; cin >> n;
 	ll ans = 1, sum = 0;
-	while(n--) //这里要反过来求，设总和s，求c(s,tn),c(s-tn,tn-1)...c(t1,t1)即s里选tn个，再从s-tn里选tn-1个
+	while(n--) //正向累加，先处理第 1 种球，再把第 2 种球混进去...
 	{
 		int t; cin >> t;
 		sum += t;
