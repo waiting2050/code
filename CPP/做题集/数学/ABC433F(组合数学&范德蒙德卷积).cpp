@@ -19,6 +19,7 @@ using ull = unsigned long long;
 
 const int N = 1e6 + 7, P = 998244353, MX = 10;
 
+// pc即pre_cnt，tc即total_cnt，用tc-pc即suffix_cnt
 ll f[N], invf[N], pc[MX], tc[MX];
 
 ll qmi(ll a, ll b)
@@ -65,7 +66,7 @@ void solve()
 		int cur = s[i] - '0';
 		if(cur == 9)
 		{
-			pc[cur]++;
+			pc[cur]++; // 注意这一步不能漏
 			continue;
 		}
 		
