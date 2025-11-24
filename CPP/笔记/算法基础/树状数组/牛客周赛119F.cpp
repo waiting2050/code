@@ -6,7 +6,8 @@
 // 
 // Powered by CP Editor (https://cpeditor.org)
 
-// 开两个树状数组ts即_tree_sum，tc即tree_count，分别记录 频次和 与 个数
+// 这道题思路很直接，如果一个数是最大支配数，那么首先将数值比他大的删去，再将数值小于它但是频次大于它的删去，不必全删，
+// 删到频次比它小1即可，在代码中可以找需要保留多少数，用总数-保留就得到待删除数了
 
 #include <bits/stdc++.h>
 using namespace std;
