@@ -1,3 +1,6 @@
+// 题目描述比较抽象，怎么算是合法的路径？就是你往下走，要距离target越来越近，不能更远。所以先跑一次最短路，求终点到每个点的距离，然后从起点开始记忆化搜索(dfs)，
+// （dfs的作用就是计算当前点到终点的合法数量），只有下一个点到终点更近才算合法。
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -21,6 +24,7 @@ vector<Edge> g[N];
 ll n, d[N], c[N];
 bitset<N> vis;
 
+// 就是普通的dijkstra算法
 void dijsktra(int st)
 {
 	priority_queue<Edge> pq;
@@ -45,6 +49,7 @@ void dijsktra(int st)
 	}
 }
 
+// 记忆化搜索，统计从st到ed的合法路径数量
 int dfs(int st, int ed)
 {
 	if(c[st] != -1) return c[st];
@@ -54,7 +59,7 @@ int dfs(int st, int ed)
 	for(auto& y : g[st])
 	{
 		int v = y.v;
-		if(d[v] < d[st]) cnt += dfs(v, ed);
+		if(d[v] < d[st]) cnt += dfs(v, ed); // if里的条件是合法的关键
 	}
 	
 	return c[st] = cnt;
