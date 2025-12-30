@@ -1,3 +1,5 @@
+// 采用全开区间写法，比如数组范围是[1,n]那么l=0,r=n+1。
+
 #include <iostream>
 using namespace std;
 using ll = long long;
@@ -16,13 +18,13 @@ int main()
     {
         ll x; cin >> x;
 
-        int l = 0, r = n;//l一定要从0开始 
+        int l = 0, r = n + 1;//l一定要从0开始 
         while (l + 1 != r)
         {
             int mid = (l + r) >> 1;
 
-            if (x > a[mid]) l = mid;
-            else r = mid;
+            if(a[mid] >= x) r = mid;
+            else l = mid;
         }
 
         if (a[r] == x) cout << r << ' ';
